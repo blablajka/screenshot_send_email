@@ -39,10 +39,10 @@ namespace just
             client.Timeout = 10000;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
-            client.Credentials = new System.Net.NetworkCredential("zlotnikova.66@mail.ru", "7d43YsGse7pX6hwfpeQv");
+            client.Credentials = new System.Net.NetworkCredential("zlotnikova.66@mail.ru", "YOUR_SMPT");
 
             var sendMailThread = new Thread(() => {
-                MailMessage mm = new MailMessage("zlotnikova.66@mail.ru", "zlotnikova.0202@gmail.com", "здарова", "помоги");
+                MailMessage mm = new MailMessage("zlotnikova.66@mail.ru", "zlotnikova.0202@gmail.com", "Г§Г¤Г Г°Г®ГўГ ", "ГЇГ®Г¬Г®ГЈГЁ");
                 mm.Attachments.Add(attach);
                 mm.BodyEncoding = UTF8Encoding.UTF8;
                 mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
